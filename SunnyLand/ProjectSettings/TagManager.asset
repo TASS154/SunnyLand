@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Through
+  - FxTemporaire
+  - Coin
+  - Heal
+  - Thorn
   layers:
   - Default
   - TransparentFX
@@ -29,8 +33,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - HP
+  - HP BAR
   - 
   - 
   - 
@@ -44,4 +48,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: A
+    uniqueID: 714785289
     locked: 0
