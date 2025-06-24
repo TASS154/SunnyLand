@@ -1,41 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
-    Coletavel ColetavelReference;
-    private void Trigger(Collider2D other) {
-        if (other.CompareTag("Player"))
+    public Coletavel ColetavelReference;
+    private bool coletado = false;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !coletado)
         {
-            if (other.gameObject.CompareTag("Coin"))
+            coletado = true;
+
+            if (gameObject.CompareTag("Coin"))
             {
                 ColetavelReference.pontos++;
+                Destroy(gameObject);
             }
-            else if (other.gameObject.CompareTag("Heal")){
-                ColetavelReference.HP++;
+            else if (gameObject.CompareTag("Heal"))
+            {
+                ColetavelReference.Heal();
+                Destroy(gameObject);
             }
-            else if (other.gameObject.CompareTag("Thorn")) 
-                {
-                    ColetavelReference.HP--;
-                }
+            else if (gameObject.CompareTag("Thorn"))
+            {
+                ColetavelReference.RemoveLife();
+                Destroy(gameObject);
+            }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Trigger(collision);
     }
 }
