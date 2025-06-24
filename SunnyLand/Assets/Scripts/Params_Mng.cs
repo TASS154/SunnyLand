@@ -13,41 +13,51 @@ public class Coletavel : MonoBehaviour
     public TMP_Text Health;
     public TMP_Text Coins;
 
-    public Button Button;
-
     // MÉTODOS
 
     public void AddPoints(int quantidade) {
         Health.text = HP.ToString();
         Coins.text = pontos.ToString();
     }
+
     public void RemoveLife()
     {
+        if (HP <= 0) {
+            HP = 0;
+            return;
+        }
         HP--;
         Health.text = HP.ToString();
     }
+
     public void Heal()
     {
+        if(HP == 5) return;
         HP++;
         Health.text = HP.ToString();
     }
     public void UpdateHUD()
     {
-
+        Health.text = HP.ToString();
+        Coins.text = pontos.ToString();
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void setValue()
     {
         Health = Health.GetComponent<TMP_Text>();
         Coins = Coins.GetComponent<TMP_Text>();
         Health.text = HP.ToString();
         Coins.text = pontos.ToString();
     }
+    // Start is called before the first frame update
+    void Start()
+    {
+        setValue();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Health.text = HP.ToString();
-        Coins.text = pontos.ToString();
+        UpdateHUD();
     }
 }
