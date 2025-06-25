@@ -644,7 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!50 &134213084
 Rigidbody2D:
   serializedVersion: 4
@@ -862,7 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!61 &175532182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!61 &310218392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1300,6 +1300,84 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &533862930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1294070261720072554, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877013516042756052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &533862931 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877013516042756052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &533862932
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533862930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5ace1dbd4b09b7409a295711dfa1879, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &533862935
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533862930}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.25, y: 12}
+    newSize: {x: 14.25, y: 12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.25, y: 12}
+  m_EdgeRadius: 0
 --- !u!1 &558191005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,7 +1744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!1 &721350846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1782,7 @@ Transform:
   - {fileID: 1651872160}
   - {fileID: 310218390}
   - {fileID: 2132342211}
+  - {fileID: 533862931}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &751938829
@@ -2269,7 +2348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!61 &855125486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3825,7 +3904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!61 &1651872162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3963,7 +4042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800006, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!1 &1753757990
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,6 +6913,8 @@ MonoBehaviour:
   HP: 5
   pontos: 0
   dead: 0
+  sprite: {fileID: 820667351}
+  tempo: 0.5
   Health: {fileID: 751938831}
   Coins: {fileID: 2142346259}
 --- !u!4 &2035730437
@@ -6877,7 +6958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColetavelReference: {fileID: 2035730436}
   particle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
-  sprite: {fileID: 820667351}
+  playerMovement: {fileID: 0}
 --- !u!61 &2132342213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7078,6 +7159,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142346257}
   m_CullTransparentMesh: 1
+--- !u!1001 &1877013516042756052
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721350847}
+    m_Modifications:
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.179048
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7780061
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.8039854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118088653597592990, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294070261720072554, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_Name
+      value: Bota
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294070261720072554, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Power
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356770425479076610, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 820667351}
+    - target: {fileID: 2356770425479076610, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 820667357}
+    - target: {fileID: 2356770425479076610, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      propertyPath: ColetavelReference
+      value: 
+      objectReference: {fileID: 2035730436}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1294070261720072554, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 533862932}
+    - targetCorrespondingSourceObject: {fileID: 1294070261720072554, guid: 7f5702cb3f2f48742b29f54b43aeb28a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 533862935}
+  m_SourcePrefab: {fileID: 100100000, guid: 7f5702cb3f2f48742b29f54b43aeb28a, type: 3}
 --- !u!1001 &7255801589023340601
 PrefabInstance:
   m_ObjectHideFlags: 0

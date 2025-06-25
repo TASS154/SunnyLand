@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Collect : MonoBehaviour
@@ -5,7 +6,9 @@ public class Collect : MonoBehaviour
     public Coletavel ColetavelReference;
     private bool coletado = false;
     public ParticleSystem particle;
-    public SpriteRenderer sprite;
+    public PlayerMovement playerMovement;
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,8 +33,11 @@ public class Collect : MonoBehaviour
             {
                 ColetavelReference.RemoveLife();
                 Instantiate(particle, transform.position, Quaternion.identity);
-                sprite.color = Color.red;
-                sprite.color = Color.white;
+                Destroy(gameObject);
+            }
+            else if (gameObject.CompareTag("Power"))
+            {
+                playerMovement.runSpeed = 60f;
                 Destroy(gameObject);
             }
         }

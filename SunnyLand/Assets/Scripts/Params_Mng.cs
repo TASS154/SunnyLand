@@ -13,6 +13,9 @@ public class Coletavel : MonoBehaviour
     public int pontos = 0;
     public bool dead = false;
 
+    public SpriteRenderer sprite;
+    public float tempo = 0.17f;
+
     public TMP_Text Health;
     public TMP_Text Coins;
 
@@ -30,6 +33,7 @@ public class Coletavel : MonoBehaviour
         }
         HP--;
         Health.text = HP.ToString();
+        StartCoroutine(piscar());
     }
 
     public void Heal()
@@ -62,6 +66,12 @@ public class Coletavel : MonoBehaviour
                 Debug.Log("GameOver");
             }
         }
+    }
+    IEnumerator piscar()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(tempo);
+        sprite.color = Color.white;
     }
     // Start is called before the first frame update
     void Start()
