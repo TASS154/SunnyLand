@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 public class Coletavel : MonoBehaviour
@@ -9,6 +11,7 @@ public class Coletavel : MonoBehaviour
     //DECLARAÇÕES
     public int HP = 5;
     public int pontos = 0;
+    public bool dead = false;
 
     public TMP_Text Health;
     public TMP_Text Coins;
@@ -19,7 +22,6 @@ public class Coletavel : MonoBehaviour
         Health.text = HP.ToString();
         Coins.text = pontos.ToString();
     }
-
     public void RemoveLife()
     {
         if (HP <= 0) {
@@ -49,6 +51,18 @@ public class Coletavel : MonoBehaviour
         Health.text = HP.ToString();
         Coins.text = pontos.ToString();
     }
+
+    public void GameOver()
+    {
+        if (HP <= 0)
+        {
+            dead = true;
+            if (dead)
+            {
+                Debug.Log("GameOver");
+            }
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +73,6 @@ public class Coletavel : MonoBehaviour
     void Update()
     {
         UpdateHUD();
+        if (HP == 0) GameOver();
     }
 }
